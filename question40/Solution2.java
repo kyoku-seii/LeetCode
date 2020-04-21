@@ -1,7 +1,9 @@
+package com.leetcode.question40;
+
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-class Solution {
+class Solution2 {
     public int[] getLeastNumbers(int[] arr, int k) {
         if (k == 0 || arr.length == 0) {
             return new int[0];
