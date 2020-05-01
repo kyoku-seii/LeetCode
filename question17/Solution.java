@@ -1,12 +1,10 @@
 package com.leetcode.question17;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Solution {
     public List<String> letterCombinations(String digits) {
+        if(digits.length() == 0) return Collections.emptyList();
         HashMap<Character, char[]> map = new HashMap<>();
         map.put('2', new char[]{'a', 'b', 'c'});
         map.put('3', new char[]{'d', 'e', 'f'});
@@ -34,11 +32,17 @@ public class Solution {
                 answer.add(sb.toString());
             } else {
                 for (String s : backAnswer) {
-                    sb.append(s);
-                    answer.add(sb.toString());
+                    StringBuilder temp = new StringBuilder(sb);
+                    temp.append(s);
+                    answer.add(temp.toString());
                 }
             }
         }
-        return backAnswer;
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        solution.letterCombinations(new String("23"));
     }
 }
