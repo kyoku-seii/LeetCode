@@ -2,23 +2,23 @@ package com.leetcode.question75;
 
 public class Solution {
     public void sortColors(int[] nums) {
-        if (nums == null) return;
-        if (nums.length<3) return;
-        int p1 = 0;
-        int p2 = nums.length-1;
-        int cur = 0;
-        while(cur <= p2){
-            if (nums[cur] == 2){
-                swap(cur,p2,nums);
-                p2--;
+        if(nums==null||nums.length<2)return;
+        int zero = 0; //[0...zero)表示0
+        int two = nums.length-1; // (two...nums.length-1] 表示2
+        int cur = 0; //[zero...cur)表示1
+
+        while(cur <= two){
+            if(cur<=two&&nums[cur]==2){
+                swap(cur,two,nums);
+                two--;
             }
-            if(cur <= p2&&nums[cur]==1){
+            if(cur<=two&&nums[cur]==1){
                 cur++;
             }
-            if(cur <= p2&&nums[cur]==0){
-                swap(cur,p1,nums);
+            if(cur<=two&&nums[cur]==0){
+                swap(zero,cur,nums);
+                zero++;
                 cur++;
-                p1++;
             }
         }
 
