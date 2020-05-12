@@ -22,7 +22,6 @@ public class Solution {
         }
         if(res== nums.length+1)
             return 0;
-
         return res;
     }
 }
