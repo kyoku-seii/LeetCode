@@ -86,19 +86,4 @@ font{
 <font >String->Integer 使用 Integer.parseInt()</font></br>
 <font >Integer->String 使用 String.valueof()</font>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[71. 简化路径](https://leetcode-cn.com/problems/simplify-path/)
