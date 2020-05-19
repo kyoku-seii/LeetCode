@@ -1,3 +1,15 @@
+<style>
+ul li{
+    font-size : 20px
+}
+font{
+    color : red;
+    font-size : 20px
+}
+</style>
+
+
+
 # leetcode 做题笔记——简洁版(复习用)
 
 # 树类问题
@@ -61,6 +73,22 @@
 <img src="picture/20.png" height=100px>
 
 使用一个stack保存左括号类型。当取到左括号推入栈中，当取到右括号时将左括号中的值推出，如果不一样则return false。并且最后要判断栈是否为空。
+
+*相似题目*
+
+## 150. 逆波兰表达式求值
+
+<img src="picture/150.png" height=200px>
+
+利用栈，把数字依次推入栈中。当遇到符号时，推出两个数进行运算。然后再推进栈。
+**值得注意的是这一题的数据类型都是String**
+
+<font >String->Integer 使用 Integer.parseInt()</font></br>
+<font >Integer->String 使用 String.valueof()</font>
+
+
+
+
 
 
 
