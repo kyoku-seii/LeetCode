@@ -1,15 +1,3 @@
-<style>
-ul li{
-    font-size : 20px
-}
-font{
-    color : red;
-    font-size : 20px
-}
-</style>
-
-
-
 # leetcode 做题笔记——简洁版(复习用)
 
 # 树类问题
@@ -83,7 +71,7 @@ font{
 利用栈，把数字依次推入栈中。当遇到符号时，推出两个数进行运算。然后再推进栈。
 **值得注意的是这一题的数据类型都是String**
 
-<font >String->Integer 使用 Integer.parseInt()</font></br>
-<font >Integer->String 使用 String.valueof()</font>
+<font color="red" size=5>String->Integer 使用 Integer.parseInt()</font><br>
+<font color="red" size=5>Integer->String 使用 String.valueof()</font>
 
 [71. 简化路径](https://leetcode-cn.com/problems/simplify-path/)
