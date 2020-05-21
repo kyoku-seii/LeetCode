@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.PriorityQueue;
 
 public class Solution2 {
-    public List<Integer> topKFrequent(int[] nums, int k) {
+    public int[] topKFrequent(int[] nums, int k) {
 
         TreeMap<Integer, Integer> map = new TreeMap<>();
         for (int num : nums) {
@@ -29,9 +29,9 @@ public class Solution2 {
             }
         }
 
-        LinkedList<Integer> res = new LinkedList<>();
-        while (!pq.isEmpty()) {
-            res.add(pq.remove());
+        int[] res = new int[pq.size()];
+        for(int w=0;w<res.length;w++){
+            res[w] = pq.remove();
         }
         return res;
     }
