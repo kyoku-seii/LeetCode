@@ -1,9 +1,14 @@
 package com.leetcode.question347;
 
+import java.util.Comparator;
+
 public class PriorityQueue<E extends Comparable<E>> implements Queue<E> {
     private Maxheap<E> maxheap;
     public PriorityQueue(){
         maxheap = new Maxheap<>();
+    }
+
+    public PriorityQueue(Comparator<Integer> integerComparator) {
     }
 
     @Override
