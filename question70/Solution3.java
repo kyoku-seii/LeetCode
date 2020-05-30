@@ -47,5 +47,4 @@ public class Solution3 {
         Solution3 solution3 = new Solution3();
         solution3.climbStairs(6);
     }
-
 }
