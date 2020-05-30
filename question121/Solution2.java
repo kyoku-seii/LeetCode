@@ -1,6 +1,4 @@
-package com.leetcode.question121;
-
-public class Solution2 {
+package com.leetcode.question121;public class Solution2 {
     public int maxProfit(int[] prices) {
         if(prices.length<=1) return 0;
         int[] maxPrice = new int[prices.length];
@@ -13,3 +11,5 @@ public class Solution2 {
         return res;
     }
 }
+
+
