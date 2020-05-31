@@ -12,6 +12,7 @@ public class Solution3 {
         }
         layer--;
         len--;
+
         while(layer>=0){
             for(int j=0;j<len;j++){
                 memo[layer][j] = Math.min(memo[layer+1][j],memo[layer+1][j+1])+triangle.get(layer).get(j);
