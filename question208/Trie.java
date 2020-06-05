@@ -1,57 +1,58 @@
 package com.leetcode.question208;
 
-import java.util.TreeMap;
+import java.util.HashMap;
 
 public class Trie {
-    private class Node {
-        public boolean isWord;
-        public TreeMap<Character, Node> next;
+    private class Node{
+        boolean isWord;
+        HashMap<Character, Node> next;
 
         public Node(boolean isWord){
             this.isWord = isWord;
-            next = new TreeMap<>();
+            this.next = new HashMap<>();
         }
 
         public Node(){
             this(false);
         }
     }
-
     private Node root;
-
     public Trie(){
         root = new Node();
     }
 
-    public void insert(String word) {
+    public void insert(String word){
         Node cur = root;
         for(int i=0;i<word.length();i++){
-            Character c = word.charAt(i);
-            if(cur.next.get(c)==null)
-                cur.next.put(c,new Node());
-            cur = cur.next.get(c);
+            Character tempC = word.charAt(i);
+            if(!cur.next.containsKey(tempC)){
+                cur.next.put(tempC,new Node());
+            }
+            cur = cur.next.get(tempC);
         }
         cur.isWord = true;
     }
 
-    public boolean search(String word) {
+    public boolean search(String word){
         Node cur = root;
-        for (int i = 0; i < word.length(); i++) {
-            Character c = word.charAt(i);
-            if (cur.next.get(c) == null)
+        for(int i=0;i<word.length();i++){
+            Character tempC = word.charAt(i);
+            if(!cur.next.containsKey(tempC)){
                 return false;
-            cur = cur.next.get(c);
+            }
+            cur = cur.next.get(tempC);
         }
         return cur.isWord;
     }
 
-    public boolean startsWith(String prefix) {
+    public boolean startsWith(String word){
         Node cur = root;
-        for (int i = 0; i < prefix.length(); i++) {
-            Character c = prefix.charAt(i);
-            if (cur.next.get(c) == null)
+        for(int i=0;i<word.length();i++){
+            Character tempC = word.charAt(i);
+            if(!cur.next.containsKey(tempC)){
                 return false;
-            cur = cur.next.get(c);
+            }
+            cur = cur.next.get(tempC);
         }
         return true;
     }
