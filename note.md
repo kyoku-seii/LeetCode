@@ -72,6 +72,10 @@
 **值得注意的是这一题的数据类型都是String**
 
 <font color="red" size=5>String->Integer 使用 Integer.parseInt()</font><br>
-<font color="red" size=5>Integer->String 使用 String.valueof()</font>
+<font color="red" size=5>Integer->String 使用 String.valueOf()</font>
 
 [71. 简化路径](https://leetcode-cn.com/problems/simplify-path/)
+
+# 位运算
+## 191题 位1的个数
+解题技巧，**n&(n-1)** 这一步可以将最后一个1置零，逐渐置零直到n等于0为止。
