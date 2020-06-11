@@ -113,24 +113,4 @@ public class DoubleLinkedList {
         }
         return sb.toString();
     }
-
-    public static void main(String[] args) {
-        DoubleLinkedList l = new DoubleLinkedList(10);
-        l.append(new Node(1,1));
-        System.out.println(l);
-        Node node2 = new Node(2,2);
-        l.append(node2);
-        System.out.println(l);
-        l.pop();
-        System.out.println(l);
-        l.append(new Node(3,3));
-        System.out.println(l);
-        l.appendFront(new Node(4,4));
-        System.out.println(l);
-        l.removeNode(node2);
-        System.out.println(l);
-        l.removeNode(null);
-        System.out.println(l);
-
-    }
 }
